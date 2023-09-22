@@ -22,7 +22,7 @@ class CustomersTests(TestCase):
     def setUpTestData(cls):
         number_of_customers = 10
         for customer_id in range(number_of_customers):
-            Customer.objects.create(firstname=f"John{customer_id}", lastname=f"Doe{customer_id}", address=f"sherman{customer_id}", city="Denver", zipcode=80011, state="CO")        self.assertTemplateUsed(response, "index.html")
+            Customer.objects.create(firstname=f"John{customer_id}", lastname=f"Doe{customer_id}", address=f"sherman{customer_id}", city="Denver", zipcode=80011, state="CO")
 
     def test_template_content(self):
         response = self.client.get(reverse("customers"))
