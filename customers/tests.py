@@ -74,6 +74,7 @@ class CustomerModelTestcase(TestCase):
         expected_string = f"Info: {customer.firstname} {customer.lastname} {customer.address} {customer.city} {customer.zipcode} {customer.state}"
         self.assertEqual(str(customer), expected_string)
 
+# Testing API Views
 class CustomerSerializerTestCase(APITestCase):
     def customer_creation_test(self):
         payload = {
