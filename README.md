@@ -55,7 +55,13 @@ Steps 5: Now, we need to define our application data models in the customers fol
 
 Step 6: we need to create necessary views in the customers folder. views.py file has some function which will receive http request and will render HttpResponse. 
 
-Step 7: We also need to create HTML templates to serve our views.
+Step 7: We also need to create HTML templates to serve our views. To do this, we will be creating a folder named templates inside customers folder. and in that templates folder all our HTML files will reside. In our project, we have three html file. Index.html will render customer list response by querying the database. add.html will handle adding new customer post request and update will handle updating the existing rows of the customer table.
+
+Step 8:   we need to add routes in the customers/urls.py file. we also need to include this file in the test_project/urls.py file as the application will first look into this file.
+
+step 9: Now we need to run the development serve using the following command.  "python manage.py runserver" and visit "http://localhost:8000/customers/" to access customers list
+and "http://localhost:8000/customers/add/" to add new customer info
+finally to edit any existing customer info we can visit "http://localhost:8000/customers/update/<id>"
 
 
 
