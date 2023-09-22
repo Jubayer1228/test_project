@@ -1,5 +1,5 @@
 from django.test import TestCase
-#from django.test import SimpleTestCase
+from rest_framework.test import APITestCase
 from django.urls import reverse
 from .models import Customer
 
@@ -73,3 +73,16 @@ class CustomerModelTestcase(TestCase):
         customer = Customer.objects.get(id=1)
         expected_string = f"Info: {customer.firstname} {customer.lastname} {customer.address} {customer.city} {customer.zipcode} {customer.state}"
         self.assertEqual(str(customer), expected_string)
+
+class CustomerSerializerTestCase(APITestCase):
+    def customer_creation_test(self):
+        payload = {
+            "firstname": "Joan",
+            "lastname": "Keith",
+            "address": "Abrt1",
+            "city": "Denver",
+            "zipcode": 80011,
+            "state": "CO"
+        }
+        response = self.client.post(reverse("add"), payload)
+        self.assertEqual(status.HTTP_201_CREATED, response.status_code)
