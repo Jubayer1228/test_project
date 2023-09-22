@@ -15,3 +15,25 @@ We need to add all the required fields before saving this new customer info. Sta
 
 To update any customer info, we can click the link on the FirstName which will redirect us to a new page. This is quite similar to the Add Customer page. 
 
+Steps to create a django webapp:
+
+Creating a Django web app involves several steps. Here's a step-by-step guide to create a Django webapp.
+
+Prerequisites:
+1. Install Python, Django
+
+Step1: Install Django
+First, we need to install Django. we can do this using Python's package manager, pip:
+pip install Django
+
+Step2: Create a Django Project
+django-admin startproject test_project
+
+Step3: Create a Django App
+Django projects are organized into apps. To create a new app use the following commands
+cd test_project  # Navigate to your project directory
+python manage.py startapp customers
+we have created a webapp called customers 
+
+Steps 4: Configure Settings
+In our project's settings (projectname/settings.py), configure the database, static files, and other project-specific settings. Make sure to set DEBUG to False in production environments. For simplicity I have used the default sqlite db which has a customer table with six fields. To use postgres, we just simply edit the settings.py file in the DATABASES section. "ENGINE" params should be postgres and provide the Datbase NAME, USER, PASSWORD, HOST, PORT info as needed. We also need to register the app by adding "customers" in the INSTALLED_APPS section
