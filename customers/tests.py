@@ -60,3 +60,16 @@ class CustomersAddTests(TestCase):
         self.assertContains(response, "<h1>Add Customer</h1>")
         self.assertNotContains(response, "Not on the page")
 
+# Testing Models
+class CustomerModelTestcase(TestCase):
+
+    #   setUpTestData method sets up the object that will be used throughout the test class.
+    @classmethod
+    def setUpTestData(cls):
+        Customer.objects.create(firstname="Peter", lastname="John", address="9954 ursula st", city="Denver", zipcode=80011, state="CO")
+
+    #   test_string_method method tests whether the string returned from the __str__ method of the Customer model is valid.
+    def test_string_method(self):
+        customer = Customer.objects.get(id=1)
+        expected_string = f"Info: {customer.firstname} {customer.lastname} {customer.address} {customer.city} {customer.zipcode} {customer.state}"
+        self.assertEqual(str(customer), expected_string)
