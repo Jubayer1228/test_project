@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+# we need to add the path for customers.urls that we have created under the customers app. we can also include other path as needed if we add more base urls
 urlpatterns = [
     path('',include('customers.urls')),
     path("admin/", admin.site.urls),
