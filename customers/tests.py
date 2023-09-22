@@ -17,11 +17,19 @@ class CustomersTests(TestCase):
     def test_template_name_correct(self):  
         response = self.client.get(reverse("customers"))
         self.assertTemplateUsed(response, "index.html")
+        
+    @classmethod
+    def setUpTestData(cls):
+        number_of_customers = 10
+        for customer_id in range(number_of_customers):
+            Customer.objects.create(firstname=f"John{customer_id}", lastname=f"Doe{customer_id}", address=f"sherman{customer_id}", city="Denver", zipcode=80011, state="CO")        self.assertTemplateUsed(response, "index.html")
 
     def test_template_content(self):
         response = self.client.get(reverse("customers"))
         self.assertContains(response, "<h1>Customers</h1>")
         self.assertNotContains(response, "Not on the page")
+
+    
 
 
 # testing add_customer_info page
