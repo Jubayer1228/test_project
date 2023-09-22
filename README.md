@@ -17,6 +17,12 @@ We need to add all the required fields before saving this new customer info. Sta
 
 To update any customer info, we can click the link on the FirstName which will redirect us to a new page. This is quite similar to the Add Customer page. 
 
+
+# To run unitTest, please run the following command
+
+python manage.py test
+
+
 Steps to create a django webapp:
 
 Creating a Django web app involves several steps. Here's a step-by-step guide to create a Django webapp.
