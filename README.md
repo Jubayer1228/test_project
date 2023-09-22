@@ -11,7 +11,7 @@ http://127.0.0.1:8000/customers/
 
 From the UI, now we can navigate to the Add Customer page by clicking the "Add Customer" link on the top right hand corner. This will open up a new page
 "http://127.0.0.1:8000/customers/add/" where we can add necessary information to add any new customer.
-We need to add all the required fields before saving this new customer info. State field is a drop down menu where we can choose the state. Zip code is a 5 digit numeric field. I have added regex to make sure only 5 digit input value will be acceptable as a valid zipcode.
+We need to add all the required fields before saving this new customer info. State field is a drop down list where we can choose the state. Zip code is a 5 digit numeric field. I have added regex to make sure only 5 digit input value will be acceptable as a valid zipcode.
 
 To update any customer info, we can click the link on the FirstName which will redirect us to a new page. This is quite similar to the Add Customer page. 
 
