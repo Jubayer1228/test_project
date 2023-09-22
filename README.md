@@ -51,6 +51,11 @@ we have created a webapp called customers
 Steps 4: Configure Settings
 In our project's settings (projectname/settings.py), configure the database, static files, and other project-specific settings. Make sure to set DEBUG to False in production environments. For simplicity I have used the default sqlite db which has a customer table with six fields. To use postgres, we just simply edit the settings.py file in the DATABASES section. "ENGINE" params should be postgres and provide the Datbase NAME, USER, PASSWORD, HOST, PORT info as needed. We also need to register the app by adding "customers" in the INSTALLED_APPS section
 
+Steps 5: Now, we need to define our application data models in the customers folder by creating models.py file. Models are used to create database tables and manage data. In our case, we have six data fields. Serialization are used to convert python objects into json or xml format. or vice versa. 
+
+Step 6: we need to create necessary views in the customers folder. views.py file has some function which will receive http request and will render HttpResponse. 
+
+Step 7: We also need to create HTML templates to serve our views.
 
 
 
