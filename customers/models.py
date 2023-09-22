@@ -10,3 +10,7 @@ class Customer(models.Model):
   city      = models.CharField(max_length=255)
   zipcode   = models.IntegerField()
   state     = models.CharField(max_length=255)
+
+
+  def __str__(self):
+      return f"Info: {self.firstname} {self.lastname} {self.address} {self.city} {self.zipcode} {self.state}"
