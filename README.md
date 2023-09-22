@@ -32,15 +32,20 @@ Prerequisites:
 
 Step1: Install Django
 First, we need to install Django. we can do this using Python's package manager, pip:
-pip install Django
+
+"pip install Django"
 
 Step2: Create a Django Project
-django-admin startproject test_project
+
+"django-admin startproject test_project"
 
 Step3: Create a Django App
 Django projects are organized into apps. To create a new app use the following commands
-cd test_project  # Navigate to your project directory
-python manage.py startapp customers
+
+"cd test_project"  # Navigate to the project directory
+
+"python manage.py startapp customers"
+
 we have created a webapp called customers 
 
 Steps 4: Configure Settings
