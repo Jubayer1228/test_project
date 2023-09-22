@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'testapp.css' %}"/>
+</head>
+<body>
+<p>
+<a id=addcustomer href="add/">Add customer</a>
+</p>
+<h1>Customers</h1>
+<table id="customers">
+<tr>
+    
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>ZipCode</th>
+    <th>State</th>
+    <th>Action</th>
+</tr>
+{% for x in mycustomers %}
+<tr>
+<td><a href="update/{{ x.id }}">{{ x.firstname }}</a></td>
+<td>{{ x.lastname }}</td>
+<td>{{ x.address }}</td>
+<td>{{ x.city }}</td>
+<td>{{ x.zipcode }}</td>
+<td>{{ x.state }}</td>
+<td><a href="delete/{{ x.id }}">delete</a></td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
