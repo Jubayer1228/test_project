@@ -3,7 +3,7 @@ A webapp with Django
 
 To run this project use the following command
 
-# git clone https://github.com/Jubayer1228/test_project.git
+git clone https://github.com/Jubayer1228/test_project.git
 
 Once we clone this repository, we can cd into the test_project.  we can issue the following command
 
