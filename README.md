@@ -1,13 +1,13 @@
 # test_project
 A webapp with Django
 
-To run this project use the following command
+To run this project in your environment, first download the project in your local environment. use the following command
 
 git clone https://github.com/Jubayer1228/test_project.git
 
-Once we clone this repository, we can cd into the test_project.  we can issue the following command
+Once we clone this repository, we can cd into the test_project.  we can issue the following command to run the project
 
-# python manage.py runserver
+# "python manage.py runserver"
 If the command runs without any error, we will see this message "Starting development server at http://127.0.0.1:8000/". we can use the following link to access the webapp
 http://127.0.0.1:8000/customers/
 
