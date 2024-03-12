@@ -2,6 +2,7 @@
 testing feature changes
 testing commit messages with new feature creation
 A webapp with Django 
+this is new 
 
 To run this project in your environment, first download the project in your local environment. use the following command
 
