@@ -1,7 +1,8 @@
 # test_project
-testing feature change1s
-testing commit messages1
+testing feature changes
+testing commit messages
 A webapp with Django 
+this is new 
 
 To run this project in your environment, first download the project in your local environment. use the following command
 
