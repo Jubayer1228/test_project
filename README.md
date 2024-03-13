@@ -3,7 +3,7 @@ testing feature changes
 testing commit messages
 A webapp with Django 
 this is new 
-
+This is latest
 To run this project in your environment, first download the project in your local environment. use the following command
 
 git clone https://github.com/Jubayer1228/test_project.git
